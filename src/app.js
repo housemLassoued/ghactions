@@ -6,6 +6,6 @@ function greet(name) {
 module.exports = greet; // On exporte la fonction
 
 // Si ce fichier est exécuté directement, afficher un message
-if (require.main === module) {
-    console.log(greet("World"));
-}
+//if (require.main === module) {
+ //   console.log(greet("World"));
+//}
