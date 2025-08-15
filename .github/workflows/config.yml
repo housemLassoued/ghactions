@@ -1,0 +1,14 @@
+on:
+  workflow_dispatch
+
+jobs:
+  configuration:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set API Key
+        run: echo "API_Key=1234" >> $GITHUB_ENV
+
+      - name: Use API Key
+        run: |
+          echo "::add-mask::$API_Key"
+          echo "Using API Key $API_Key"
