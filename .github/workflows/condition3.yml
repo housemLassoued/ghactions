@@ -1,0 +1,18 @@
+on:
+  workflow_dispatch:
+jobs:
+  condition:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout Code
+        run: actions/checkout@v4.3.0 
+      - name: Run Test script
+        run: npm test
+      - name: Print Message
+        run: echo "job is runing"
+        if: succes()
+        
+        
+        
+
+  
