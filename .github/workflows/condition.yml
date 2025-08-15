@@ -1,0 +1,12 @@
+name: condition workflow
+on:
+  workflow_dispatch:
+jobs:
+  condition:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Message
+        run: echo " the job is running"
+        if: ${{ github.even_name == "puh"}}
+    
+  
