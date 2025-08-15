@@ -7,6 +7,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print message
+        if: ${{ startsWith(github.ref, 'refs/tags/latest') }}
         run: echo "the job is running"
-        if: ${{ startswith(github/ref,"refs/tags/latest")}}
- 
