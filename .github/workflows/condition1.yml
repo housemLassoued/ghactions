@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - main
+      
 jobs:
   condition:
     runs-on: ubuntu-latest
