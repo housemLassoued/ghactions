@@ -7,6 +7,6 @@ jobs:
     steps:
       - name: Print Message
         run: echo " the job is running"
-        if: ${{ github.even_name == "push"}}
+        if: ${{ github.even_name == 'push' }}
     
   
