@@ -1,0 +1,12 @@
+on:
+  push:
+    branches:
+      - main
+jobs:
+  condition:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print message
+        run: echo "the job is running"
+        if: ${{ startswith(github/ref,"refs/tags/latest")}}
+ 
