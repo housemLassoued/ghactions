@@ -1,0 +1,11 @@
+name: condition_1 workflow
+on:
+  push:
+    branches: main
+jobs:
+  condition:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Message
+        if: ${{ github.event.head_commit.message, 'WIP' }}
+        run: echo "The job is running"
