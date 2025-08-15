@@ -1,0 +1,16 @@
+name: Test deprecated
+
+on:
+  workflow_dispatch:
+
+jobs:
+  condition:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set deprecated variable
+        id: set_var
+        run: echo "deprecated=true" >> $GITHUB_ENV
+
+      - name: Show warning if deprecated
+        if: env.deprecated == 'true'
+        run: echo "::warning::Deprecated function found"
